@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { injectGlobal, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { primary, bg, text, header } from '../utils/theme';
 import { media } from '../utils/media';
 import { Wrapper } from './elements';
@@ -8,8 +8,7 @@ import Header from './header';
 import Footer from './footer';
 import SEO from './seo';
 
-injectGlobal([
-  `
+const GlobalStyle = createGlobalStyle`
   html{
     height: 100%;
     background: #f2f5f7;
@@ -31,8 +30,7 @@ injectGlobal([
     }
   }
 }
-`,
-]);
+`;
 
 const Site = styled.div`
   min-height: 100vh;
@@ -158,6 +156,7 @@ const Layout = ({
   location,
 }) => (
   <ThemeProvider theme={{ mode }}>
+    <GlobalStyle />
     {!isProject ? (
       <Site>
         <SEO />
