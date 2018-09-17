@@ -8,7 +8,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "@next",
+    "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "@next",
     "gatsby-image": "@next",
     "gatsby-plugin-catch-links": "@next",
