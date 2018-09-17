@@ -13,6 +13,7 @@
     "gatsby-image": "next",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-lodash": "next",
+    "gatsby-plugin-manifest": "^1.0.27",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-page-transitions": "^1.0.7",

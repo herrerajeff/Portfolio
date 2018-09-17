@@ -82,6 +82,18 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Jeffrey Herrera`,
+        short_name: `JH`,
+        start_url: `/`,
+        background_color: `#f2f5f7`,
+        theme_color: `#fcda00`,
+        display: `minimal-ui`,
+        icon: `src/images/android-chrome-256x256.png`, // This path is relative to the root of the site.
+      },
+    },
     'gatsby-plugin-twitter',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
