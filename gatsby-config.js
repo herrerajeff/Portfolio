@@ -104,7 +104,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-96198749-1',
-        // Avoids sending pageview hits from custom paths
         exclude: ['/casa/'],
       },
     },
@@ -112,6 +111,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify',
+    // 'gatsby-plugin-netlify',
   ],
 };
