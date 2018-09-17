@@ -104,6 +104,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
-    `gatsby-plugin-netlify`,
+    // `gatsby-plugin-netlify`,
   ],
 };
