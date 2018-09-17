@@ -28,7 +28,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "next",
     "gatsby-remark-images-contentful": "^1.0.2",
-    "gatsby-remark-relative-images": "next",
+    "gatsby-remark-relative-images": "0.1.2",
     "gatsby-remark-responsive-iframe": "next",
     "gatsby-source-contentful": "next",
     "gatsby-source-filesystem": "next",
