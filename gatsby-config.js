@@ -94,16 +94,17 @@ module.exports = {
         icon: `src/images/android-chrome-256x256.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-twitter',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js',
       },
     },
+    'gatsby-plugin-twitter',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-offline',
+    `gatsby-plugin-netlify`,
   ],
 };
