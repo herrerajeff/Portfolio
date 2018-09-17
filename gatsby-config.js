@@ -45,6 +45,12 @@ module.exports = {
           'gatsby-remark-responsive-iframe',
           'gatsby-remark-component',
           {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+              color: `#fcda00`,
+            },
+          },
+          {
             resolve: 'gatsby-remark-images-contentful',
             options: {
               maxWidth: 1280,
@@ -105,6 +111,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
-    // 'gatsby-plugin-netlify',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };
