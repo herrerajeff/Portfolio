@@ -11,9 +11,9 @@ const SEO = props => {
   let postURL;
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
   if (postSEO) {
-    const postMeta = postNode.frontmatter;
+    const postMeta = postNode;
     title = postMeta.title; // eslint-disable-line prefer-destructuring
-    description = postNode.excerpt;
+    description = postNode.description.description;
     image = postMeta.cover.childImageSharp.resize.src;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
