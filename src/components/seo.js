@@ -17,6 +17,7 @@ const SEO = props => {
       />
       <meta name="image" content={config.siteUrl + realPrefix + config.siteBanner} />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:url" content={config.siteUrl} />
       <meta property="og:title" content={config.siteTitle} />
