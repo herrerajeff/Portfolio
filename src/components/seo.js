@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import config from '../utils/config';
 
 const SEO = props => {
@@ -101,3 +102,9 @@ const SEO = props => {
 };
 
 export default SEO;
+
+SEO.propTypes = {
+  postNode: PropTypes.object,
+  postPath: PropTypes.string,
+  postSEO: PropTypes.bool,
+};
