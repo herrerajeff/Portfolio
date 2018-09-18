@@ -16,8 +16,7 @@ const SEO = props => {
         content="graphic, design, portfolio, jeffrey, herrera, jeff, graphics, designer, minimalism, bold, typography, motion, web, development, product"
       />
       <meta name="image" content={config.siteUrl + realPrefix + config.siteBanner} />
-      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
-      <meta property="og:locale" content="de_DE" />
+      <meta property="og:locale" content="en_US" />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:url" content={config.siteUrl} />
       <meta property="og:title" content={config.siteTitle} />
