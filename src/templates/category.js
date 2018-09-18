@@ -63,7 +63,7 @@ const Category = props => {
             {subline} (See <Link to="/categories">all categories</Link>)
           </div>
           <BlogList>
-            {edges.map(({ node: { title, date, excerpt, slug, timeToRead, cover, post } }) => (
+            {edges.map(({ node: { title, date, excerpt, slug, timeToRead, featured, post } }) => (
               <Card
                 title={title}
                 date={date}
@@ -73,8 +73,8 @@ const Category = props => {
                 category={category}
                 key={slug}
                 alt={title}
-                sizes={cover.sizes}
-                aspectRatio={cover.sizes.aspectRatio}
+                sizes={featured.sizes}
+                aspectRatio={featured.sizes.aspectRatio}
               >
                 <div dangerouslySetInnerHTML={{ __html: post.childMarkdownRemark.html }} />
               </Card>

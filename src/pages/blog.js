@@ -14,7 +14,7 @@ const Blog = ({
     <Helmet title="Blog" />
     <Wrapper>
       <BlogList>
-        {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, cover, post } }) => (
+        {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, featured, post } }) => (
           <Card
             title={title}
             date={date}
@@ -24,8 +24,8 @@ const Blog = ({
             category={category}
             key={slug}
             alt={title}
-            sizes={cover.sizes}
-            aspectRatio={cover.sizes.aspectRatio}
+            sizes={featured.sizes}
+            aspectRatio={featured.sizes.aspectRatio}
           >
             <div dangerouslySetInnerHTML={{ __html: post.childMarkdownRemark.html }} />
           </Card>
