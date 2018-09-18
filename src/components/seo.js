@@ -4,68 +4,66 @@ import PropTypes from 'prop-types';
 import config from '../utils/config';
 
 const SEO = props => {
-  const { postNode, postPath, postSEO } = this.props;
-    let title;
-    let description;
-    let image;
-    let postURL;
-    if (postSEO) {
-      const postMeta = postNode;
-      ({ title } = postMeta);
-      description = postMeta.description.description
-        ? postMeta.description.description
-        : postNode.excerpt;
-      image = postMeta.cover;
-      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
-    } else {
-      title = config.siteTitle;
-      description = config.siteDescription;
-      image = config.siteLogo;
-    }
-
-    image = urljoin(config.siteUrl, config.pathPrefix, image);
-    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
-    const schemaOrgJSONLD = [
+  const { postNode, postPath, postSEO } = props;
+  let title;
+  let description;
+  let image;
+  let postURL;
+  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+  if (postSEO) {
+    const postMeta = postNode.frontmatter;
+    title = postMeta.title; // eslint-disable-line prefer-destructuring
+    description = postNode.excerpt;
+    image = postMeta.cover.childImageSharp.resize.src;
+    postURL = config.siteUrl + realPrefix + postPath;
+  } else {
+    title = config.siteTitle;
+    description = config.siteDescription;
+    image = config.siteLogo;
+  }
+  image = config.siteUrl + realPrefix + image;
+  const blogURL = config.siteUrl + config.pathPrefix;
+  const schemaOrgJSONLD = [
+    {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      url: blogURL,
+      name: title,
+      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+    },
+  ];
+  if (postSEO) {
+    schemaOrgJSONLD.push(
       {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
+        '@context': 'http://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@id': postURL,
+              name: title,
+              image,
+            },
+          },
+        ],
+      },
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BlogPosting',
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ""
-      }
-    ];
-    if (postSEO) {
-      schemaOrgJSONLD.push(
-        {
-          "@context": "http://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              item: {
-                "@id": postURL,
-                name: title,
-                image
-              }
-            }
-          ]
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        headline: title,
+        image: {
+          '@type': 'ImageObject',
+          url: image,
         },
-        {
-          "@context": "http://schema.org",
-          "@type": "BlogPosting",
-          url: blogURL,
-          name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
-          headline: title,
-          image: {
-            "@type": "ImageObject",
-            url: image
-          },
-          description
-        }
-      );
+        description,
       }
+    );
+  }
   return (
     <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera">
       <meta charSet="utf-8" />
