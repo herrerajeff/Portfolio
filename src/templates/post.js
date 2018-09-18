@@ -147,6 +147,9 @@ export const postQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       category
+      description {
+        description
+      }
       date(formatString: "MMM DD, YYYY")
       post {
         childMarkdownRemark {

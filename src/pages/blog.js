@@ -53,7 +53,7 @@ export const BlogQuery = graphql`
               timeToRead
             }
           }
-          cover {
+          featured {
             id
             sizes(maxWidth: 800, quality: 100) {
               base64
