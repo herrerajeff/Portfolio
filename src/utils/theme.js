@@ -16,13 +16,13 @@ const soft = theme('mode', {
 });
 
 const text = theme('mode', {
-  day: 'hsla(200,5%,0%,50%)',
-  night: 'hsla(200,10%,100%, 80%)',
+  day: 'rgba(0,0,0,0.5)',
+  night: 'rgba(255,255,255,0.8)',
 });
 
 const lightText = theme('mode', {
-  day: 'hsl(200,10%,80%)',
-  night: 'hsl(200,10%,40%)',
+  day: '#C7CED1',
+  night: '#5C6970',
 });
 
 const header = theme('mode', {
@@ -32,7 +32,7 @@ const header = theme('mode', {
 
 const footer = theme('mode', {
   day: 'white',
-  night: 'hsl(0,0%,30%)',
+  night: '#4D4D4D',
 });
 
 const footerGlow = theme('mode', {
