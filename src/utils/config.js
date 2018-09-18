@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: '/',
 
-  siteUrl: 'localhost:8000', // Domain of your site. No trailing slash!
+  siteUrl: 'https://www.jeffreyherrera.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteBanner: '/profile.jpg',
+  siteBanner: 'src/images/profile.jpg',
   siteDescription: 'The Portfolio of Jeffrey Herrera',
 
   siteFBAppID: '123456789', // Facebook App ID
