@@ -14,7 +14,7 @@ const SEO = props => {
     const postMeta = postNode;
     title = postMeta.title; // eslint-disable-line prefer-destructuring
     description = postNode.description.description;
-    image = postMeta.cover.childImageSharp.resize.src;
+    image = postMeta.featured.childImageSharp.resize.src;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
     title = config.siteTitle;
