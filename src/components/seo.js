@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import config from '../utils/config';
 
 const SEO = props => {
+  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
   return (
     <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera">
       <meta charSet="utf-8" />
