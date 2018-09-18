@@ -31,6 +31,8 @@ const WorkLink = styled(Link)`
   overflow: hidden;
   &:hover {
     background-color: transparent !important;
+    font-style: normal;
+    text-decoration: none;
   }
   @media ${media.m} {
     cursor: pointer !important;

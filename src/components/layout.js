@@ -71,9 +71,11 @@ const Main = styled.div`
     transition: all 0.25s ease;
     display: inline-block;
     position: relative;
-    &:hover {
-      text-decoration: line-through;
-      font-style: oblique;
+    @media ${media.s} {
+      &:hover {
+        text-decoration: line-through;
+        font-style: oblique;
+      }
     }
   }
 `;
