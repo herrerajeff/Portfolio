@@ -9,5 +9,5 @@ module.exports = {
 
   siteFBAppID: '123456789', // Facebook App ID
   userTwitter: '@isthatjeff', // Twitter Username
-  ogSiteName: 'minimal', // Facebook Site Name
+  ogSiteName: 'Jeffrey Herrera - Designer', // Facebook Site Name
 };
