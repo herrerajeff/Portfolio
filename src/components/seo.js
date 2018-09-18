@@ -68,8 +68,8 @@ const SEO = props => {
     <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera">
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{config.siteTitle}</title>
+      <meta name="description" content={config.siteDescription} />
       <meta
         name="keywords"
         content="graphic, design, portfolio, jeffrey, herrera, jeff, graphics, designer, minimalism, bold, typography, motion, web, development, product"
@@ -78,8 +78,7 @@ const SEO = props => {
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta property="og:locale" content="de_DE" />
       <meta property="og:site_name" content={config.ogSiteName} />
-      <meta property="og:url" content={postSEO ? postURL : blogURL} />
-      {postSEO ? <meta property="og:type" content="article" /> : null}
+      <meta property="og:url" content={config.siteUrl} />
       <meta property="og:title" content={config.siteTitle} />
       <meta property="og:description" content={config.siteDescription} />
       <meta property="og:image" content={image} />
