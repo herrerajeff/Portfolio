@@ -32,7 +32,7 @@ const NavListContainer = styled.div`
         transform: ${props => (props.open ? 'translateX(0)' : 'translateX(10px)')};
         p {
           display: block;
-          color: hsla(200, 10%, 100%, 80%);
+          color: rgba(255,255,255,0.8);
           text-align: right;
           font-size: 1.2em;
           margin-bottom: 3em;
@@ -57,7 +57,7 @@ const NavListContainer = styled.div`
       }
     }
     a {
-      color: white !important;
+      color: #FFF !important;
     }
   }
 `;
@@ -109,6 +109,7 @@ const NavSub = styled.li`
   font-size: 0.7em;
   position: relative;
   top: -3px;
+  text-align: right;
   p {
     margin-bottom: 0;
     display: inline;
@@ -127,7 +128,7 @@ const NavSub = styled.li`
   svg {
     width: 1.625em !important;
     position: relative;
-    top: 5px;
+    top: 3px;
     path {
       transition: all 0.25s ease;
       fill: ${header};
@@ -182,13 +183,13 @@ const NavLink = props => (
 
 const NavToggle = styled.button`
   position: fixed;
-  top: 2.2em;
-  right: 20px;
+  top: 0;
+  right: 0;
   z-index: 10;
   height: 3em;
   width: 3em;
   background-color: transparent;
-  padding: 0.5em;
+  padding: 3.63em;
   display: none;
   align-items: center;
   justify-content: center;
