@@ -14,12 +14,12 @@ const SEO = props => {
     const postMeta = postNode;
     title = postMeta.title; // eslint-disable-line prefer-destructuring
     description = postNode.description.description;
-    image = postMeta.featured.sizes.src;
+    image = config.siteUrl + realPrefix + image;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
-    image = config.siteLogo;
+    image = config.siteUrl + realPrefix + image;
   }
   image = config.siteUrl + realPrefix + image;
   const blogURL = config.siteUrl + config.pathPrefix;
