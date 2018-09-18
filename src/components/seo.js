@@ -13,7 +13,7 @@ const SEO = props => {
   if (postSEO) {
     // const postMeta = postNode.childMarkdownRemark;
     title = postNode.title; // eslint-disable-line prefer-destructuring
-    description = postNode.excerpt;
+    description = postNode.description.description;
     image = config.siteBanner;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {

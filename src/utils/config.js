@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: '/',
 
+  siteTitle: 'Jeffrey Herrera - Designer',
   siteUrl: 'https://www.jeffreyherrera.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteBanner: '/profile.jpg',
