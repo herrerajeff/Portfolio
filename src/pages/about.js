@@ -97,8 +97,8 @@ const About = () => (
                   />
                 </svg>
               </Icon>
-              <a href="https://open.spotify.com/user/121523262/playlist/2jIiu5hdzVaC0HZXrttVSp?si=OqJaN9T8SNaHCgvY6Ac8Xg">
-                July Playlist
+              <a href="https://open.spotify.com/user/121523262/playlist/60aHzu4i3epYBVqvAX5wXC?si=zF_n10lVRT2qGllu0a1NjQ">
+                August Playlist
               </a>{' '}
               &mdash; <Link to="/monthly-playlists/">View all Monthly Playlists</Link>
             </p>
