@@ -11,17 +11,16 @@ const SEO = props => {
   let postURL;
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
   if (postSEO) {
-    const postMeta = postNode;
-    title = postMeta.title; // eslint-disable-line prefer-destructuring
+    title = postNode.title; // eslint-disable-line prefer-destructuring
     description = postNode.description.description;
-    image = config.siteUrl + realPrefix + image;
+    image = config.siteUrl + image;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
-    image = config.siteUrl + realPrefix + image;
+    image = config.siteUrl + image;
   }
-  image = config.siteUrl + realPrefix + image;
+  image = config.siteUrl + image;
   const blogURL = config.siteUrl + config.pathPrefix;
   const schemaOrgJSONLD = [
     {
