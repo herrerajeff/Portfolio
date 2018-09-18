@@ -13,14 +13,14 @@ const SEO = props => {
   if (postSEO) {
     title = postNode.title; // eslint-disable-line prefer-destructuring
     description = postNode.description.description;
-    image = config.siteUrl + siteBanner;
+    image = config.siteUrl + config.siteBanner;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
     title = config.siteTitle;
     description = config.siteDescription;
-    image = config.siteUrl + siteBanner;
+    image = config.siteUrl + config.siteBanner;
   }
-  image = config.siteUrl + siteBanner;
+  image = config.siteUrl + config.siteBanner;
   const blogURL = config.siteUrl + config.pathPrefix;
   const schemaOrgJSONLD = [
     {
