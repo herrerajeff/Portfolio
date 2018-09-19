@@ -173,29 +173,7 @@ const Layout = ({
   image
 }) => (
   <div>
-    <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera">
-      {/* <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <meta name="description" content="From the Desk of Jeffrey Herrera" />
-      <meta name="image" content="https://www.jeffreyherrera.com/profile.jpg" />
-      <script type="application/ld+json">
-        {JSON.stringify(schemaOrgJSONLD)}
-      </script>
-      {postPath ? (<link rel="canonical" content={postPath}/>):(<link rel="canonical" content="https://www.jeffreyherrera.com"/>)};
-      {postPath ? (<meta property="og:url" content={postPath}/>):(<meta property="og:url" content="https://www.jeffreyherrera.com"/>)};
-      <meta property="og:type" content="website" />
-      {title ? (<meta property="og:title" content={title} />):(<meta property="og:title" content="Designer · Jeffrey Herrera" />)};
-      {description ? (<meta property="og:description" content={description} />):(<meta property="From the Desk of Jeffrey Herrera" content={config.siteDescription} />)};
-      {image ? (<meta property="og:image" content={image} />):(<meta property="og:image" content="https://www.jeffreyherrera.com/profile.jpg" />)}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:creator"
-        content={config.userTwitter ? config.userTwitter : ""}
-      />
-      {title ? (<meta name="twitter:title" content={title} />):(<meta name="twitter:title" content="Designer · Jeffrey Herrera" />)};
-      {description ? (<meta name="twitter:description" content={description} />):(<meta name="twitter:description" content="From the Desk of Jeffrey Herrera" />)};
-      {image ? (<meta name="twitter:image" content={image} />):(<meta name="twitter:image" content="https://www.jeffreyherrera.com/profile.jpg" />)}; */}
-  </Helmet>
+    <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera" />>
   <ThemeProvider theme={{ mode }}>
     {!isProject ? (
       <Site>
