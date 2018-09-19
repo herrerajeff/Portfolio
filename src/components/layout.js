@@ -158,9 +158,9 @@ const Layout = ({
   location,
 }) => (
   <ThemeProvider theme={{ mode }}>
+    <SEO />
     {!isProject ? (
       <Site>
-        <SEO />
         <GlobalStyle />
         <Header location={location} />
         <Main>{children}</Main>
@@ -168,7 +168,6 @@ const Layout = ({
       </Site>
     ) : (
       <Site>
-        <SEO />
         <GlobalStyle />
         <ThemeProvider theme={projectTheme}>
           <WorkHeader background={projectColor}>
