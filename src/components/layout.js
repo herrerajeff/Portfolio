@@ -157,8 +157,9 @@ const Layout = ({
   next,
   location,
 }) => (
+  <div>
+  <SEO />
   <ThemeProvider theme={{ mode }}>
-    <SEO />
     {!isProject ? (
       <Site>
         <GlobalStyle />
@@ -190,6 +191,7 @@ const Layout = ({
       </Site>
     )}
   </ThemeProvider>
+  </div>
 );
 
 export { Layout, Site, Wrapper, Main };
