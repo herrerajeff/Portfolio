@@ -143,7 +143,7 @@ export const query = graphql`
           }
           cover {
             id
-            sizes(maxWidth: 800, quality: 100) {
+            sizes(maxWidth: 550, quality: 100) {
               base64
               src
               srcSet
