@@ -5,6 +5,7 @@ import { text, soft } from '../utils/theme';
 import { Layout } from '../components/layout';
 import { media } from '../utils/media';
 import { Wrapper } from '../components/elements';
+import SEO from '../components/seo';
 
 const StartupWrapper = styled.div`
   display: grid;
@@ -130,6 +131,7 @@ const StartupLink = props => (
 const Startup = () => (
   <Layout>
     <Helmet title="Casa" />
+    <SEO postPath='https://www.jeffreyherrera.com/casa' title="Casa" postSEO />
     <Wrapper>
       <MainLinks>
         <a

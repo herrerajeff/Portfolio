@@ -6,6 +6,7 @@ import { fontL, header, primary } from '../utils/theme';
 import { Layout } from '../components/layout';
 import { media } from '../utils/media';
 import { Wrapper } from '../components/elements';
+import SEO from '../components/seo';
 
 const AboutWrapper = styled.div`
   display: grid;
@@ -65,6 +66,7 @@ const Icon = styled.i`
 const About = () => (
   <Layout mode="night">
     <Helmet title="About" />
+    <SEO postPath="https://www.jeffreyherrera.com/about" title="About" postSEO />
     <Wrapper>
       <AboutWrapper>
         <Title>

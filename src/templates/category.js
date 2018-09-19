@@ -6,6 +6,8 @@ import { Layout } from '../components/layout';
 import { Card } from '../components/card';
 import { media } from '../utils/media';
 import { Wrapper, BlogList } from '../components/elements';
+import config from '../utils/config';
+import SEO from '../components/seo';
 
 const CategoryTitle = styled.div`
   display: flex;
@@ -54,6 +56,7 @@ const Category = props => {
   return (
     <Layout>
       <Helmet title={`${category}`} />
+      <SEO postPath={`${config.siteUrl}` + `${category}`} postNode={projectData} title={`${category}`} postSEO />
       <CategoryWrapper>
         <Wrapper>
           <CategoryTitle>

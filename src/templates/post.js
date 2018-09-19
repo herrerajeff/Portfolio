@@ -118,7 +118,7 @@ const Post = props => {
   const postData = props.data.contentfulBlogPost;
   return (
     <Layout>
-      <SEO postPath={postData.slug} postNode={postData} postSEO />
+      <SEO postPath={postData.slug} postNode={postData} title={`${postData.title}`} description={postData.description.description} image={postData.featured.sizes.src} postSEO />
       <Helmet title={`${postData.title}`} />
       <Wrapper>
         <PostWrapper>
@@ -149,6 +149,19 @@ export const postQuery = graphql`
       category
       description {
         description
+      }
+      featured {
+        id
+        sizes(maxWidth: 1280, quality: 100) {
+          base64
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          aspectRatio
+          sizes
+          ...GatsbyContentfulSizes_withWebp
+        }
       }
       date(formatString: "MMM DD, YYYY")
       post {

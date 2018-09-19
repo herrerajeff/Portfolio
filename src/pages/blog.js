@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { Card } from '../components/card';
 import { Layout } from '../components/layout';
 import { Wrapper, BlogList } from '../components/elements';
+import SEO from '../components/seo';
 
 const Blog = ({
   data: {
@@ -12,6 +13,7 @@ const Blog = ({
 }) => (
   <Layout>
     <Helmet title="Blog" />
+    <SEO postPath="https://www.jeffreyherrera.com/blog" title="Blog" postSEO />
     <Wrapper>
       <BlogList>
         {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, featured, post } }) => (

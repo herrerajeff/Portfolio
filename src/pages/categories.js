@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase';
 import { Layout } from '../components/layout';
 import { Wrapper } from '../components/elements';
 import { media } from '../utils/media';
+import SEO from '../components/seo';
 
 const AllCategoryTitle = styled.h3`
   display: block;

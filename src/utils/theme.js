@@ -27,11 +27,11 @@ const lightText = theme('mode', {
 
 const header = theme('mode', {
   day: '#222',
-  night: 'white',
+  night: '#FFFFFF',
 });
 
 const footer = theme('mode', {
-  day: 'white',
+  day: '#FFFFFF',
   night: '#4D4D4D',
 });
 

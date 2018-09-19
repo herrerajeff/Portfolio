@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Layout } from '../components/layout';
 import { Wrapper } from '../components/elements';
 import { media } from '../utils/media';
+import SEO from '../components/seo';
 
 const FourOhFourWrapper = styled.div`
   padding: 3em 0;
@@ -46,6 +47,7 @@ const BG = styled.div`
 const FourOhFour = () => (
   <Layout mode="night">
     <Helmet title="Page Not Found" />
+    <SEO postPath="https://www.jeffreyherrera.com/404" title="Page Not Found" description="404! Looks like someone's lost." postSEO />
     <Wrapper>
       <BG />
       <FourOhFourWrapper>

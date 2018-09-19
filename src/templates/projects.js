@@ -180,7 +180,7 @@ const Project = props => {
       next={next}
       prev={prev}
     >
-      <SEO postPath={projectData.slug} postNode={projectData} postSEO />
+      <SEO postPath={projectData.slug} postNode={projectData} title={`${projectData.title}`} description={projectData.description.description} image={projectData.featured.sizes.src} postSEO />
       <Helmet title={`${projectData.title}`} />
       <Img
         key={projectData.featured.sizes.src}
