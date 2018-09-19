@@ -174,7 +174,7 @@ const Layout = ({
 }) => (
   <div>
     <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera">
-      <meta charSet="utf-8" />
+      {/* <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
       <meta name="description" content="From the Desk of Jeffrey Herrera" />
       <meta name="image" content="https://www.jeffreyherrera.com/profile.jpg" />
@@ -194,7 +194,7 @@ const Layout = ({
       />
       {title ? (<meta name="twitter:title" content={title} />):(<meta name="twitter:title" content="Designer · Jeffrey Herrera" />)};
       {description ? (<meta name="twitter:description" content={description} />):(<meta name="twitter:description" content="From the Desk of Jeffrey Herrera" />)};
-      {image ? (<meta name="twitter:image" content={image} />):(<meta name="twitter:image" content="https://www.jeffreyherrera.com/profile.jpg" />)};
+      {image ? (<meta name="twitter:image" content={image} />):(<meta name="twitter:image" content="https://www.jeffreyherrera.com/profile.jpg" />)}; */}
   </Helmet>
   <ThemeProvider theme={{ mode }}>
     {!isProject ? (
