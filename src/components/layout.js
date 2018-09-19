@@ -181,7 +181,7 @@ const Layout = ({
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
-      {postPath ? (<Link rel="canonical" content={postPath}/>):(<Link rel="canonical" content="https://www.jeffreyherrera.com"/>)};
+      {postPath ? (<link rel="canonical" content={postPath}/>):(<link rel="canonical" content="https://www.jeffreyherrera.com"/>)};
       {postPath ? (<meta property="og:url" content={postPath}/>):(<meta property="og:url" content="https://www.jeffreyherrera.com"/>)};
       <meta property="og:type" content="website" />
       {title ? (<meta property="og:title" content={title} />):(<meta property="og:title" content="Designer · Jeffrey Herrera" />)};
