@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && echo '/*    /index.html   200' > static/_redirects",
+    "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {
