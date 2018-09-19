@@ -103,7 +103,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-96198749-1',
+        trackingId: process.env.GOOGLE_ANALYTICS || '',
         exclude: ['/casa/'],
       },
     },
