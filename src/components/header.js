@@ -35,7 +35,7 @@ const LogoWrapper = styled(Logo)`
 const Header = () => (
   <Wrapper>
     <HeaderWrapper>
-      <Link to="/">
+      <Link to="/" alt="Home">
         <LogoWrapper viewBox="0 0 411.15 280.24">
           <path
             d="M75.19 153.32h70.42v108.24H75.19z"

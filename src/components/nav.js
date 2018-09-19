@@ -228,7 +228,7 @@ export default class Nav extends Component {
             <NavSub>
               <p>
                 FOLLOW
-                <SocialLink href="https://www.twitter.com/isthatjeff">
+                <SocialLink href="https://www.twitter.com/isthatjeff" alt="Twitter">
                   <svg
                     fillRule="evenodd"
                     strokeLinejoin="round"
@@ -242,7 +242,7 @@ export default class Nav extends Component {
                     />
                   </svg>
                 </SocialLink>
-                <SocialLink href="https://www.instagram.com/_isthatjeff">
+                <SocialLink href="https://www.instagram.com/_isthatjeff" alt="Instagram">
                   <svg
                     fillRule="evenodd"
                     strokeLinejoin="round"
