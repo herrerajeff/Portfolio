@@ -130,8 +130,7 @@ const StartupLink = props => (
 
 const Startup = () => (
   <Layout>
-    <Helmet title="Casa" />
-    <SEO postPath='https://www.jeffreyherrera.com/casa' title="Casa" postSEO />
+    <Helmet title="Casa" postPath='https://www.jeffreyherrera.com/casa' />
     <Wrapper>
       <MainLinks>
         <a

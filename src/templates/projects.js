@@ -6,7 +6,6 @@ import Img from 'gatsby-image';
 import { fontL, text } from '../utils/theme';
 import { Layout } from '../components/layout';
 import { Wrapper } from '../components/elements';
-import SEO from '../components/seo';
 import { media } from '../utils/media';
 
 const ProjectMain = styled.div.attrs({
@@ -180,8 +179,7 @@ const Project = props => {
       next={next}
       prev={prev}
     >
-      <SEO postPath={projectData.slug} postNode={projectData} title={`${projectData.title}`} description={projectData.description.description} image={projectData.featured.sizes.src} postSEO />
-      <Helmet title={`${projectData.title}`} />
+      <Helmet title={`${projectData.title}`} postPath={projectData.slug} postNode={projectData} description={projectData.description.description} image={projectData.featured.sizes.src} />
       <Img
         key={projectData.featured.sizes.src}
         alt={projectData.title}

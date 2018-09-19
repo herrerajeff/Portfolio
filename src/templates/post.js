@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import { Layout } from '../components/layout';
-import SEO from '../components/seo';
 import { CategoryLink } from '../components/card';
 import { media } from '../utils/media';
 import { text, fontL, footerGlow, footer, header } from '../utils/theme';
@@ -118,8 +117,7 @@ const Post = props => {
   const postData = props.data.contentfulBlogPost;
   return (
     <Layout>
-      <SEO postPath={postData.slug} postNode={postData} title={`${postData.title}`} description={postData.description.description} image={postData.featured.sizes.src} postSEO />
-      <Helmet title={`${postData.title}`} />
+      <Helmet title={`${postData.title}`} postPath={postData.slug} postNode={postData} description={postData.description.description} image={postData.featured.sizes.src} />
       <Wrapper>
         <PostWrapper>
           <PostTitle>{postData.title}</PostTitle>

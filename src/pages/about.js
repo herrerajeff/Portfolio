@@ -65,8 +65,7 @@ const Icon = styled.i`
 
 const About = () => (
   <Layout mode="night">
-    <Helmet title="About" />
-    <SEO postPath="https://www.jeffreyherrera.com/about" title="About" postSEO />
+    <Helmet title="About" postPath="https://www.jeffreyherrera.com/about" />
     <Wrapper>
       <AboutWrapper>
         <Title>

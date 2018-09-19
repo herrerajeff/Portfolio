@@ -62,7 +62,7 @@ const Category = props => {
 
   return (
     <Layout>
-      <Helmet title="Categories" />
+      <Helmet title="Categories" postPath='https://www.jeffreyherrera.com/categories' />
       <CategoryWrapper>
         <Wrapper>
           <AllCategoryTitle>All Categories</AllCategoryTitle>

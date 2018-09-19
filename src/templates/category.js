@@ -7,7 +7,6 @@ import { Card } from '../components/card';
 import { media } from '../utils/media';
 import { Wrapper, BlogList } from '../components/elements';
 import config from '../utils/config';
-import SEO from '../components/seo';
 
 const CategoryTitle = styled.div`
   display: flex;
@@ -55,8 +54,7 @@ const Category = props => {
   const subline = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${category}"`;
   return (
     <Layout>
-      <Helmet title={`${category}`} />
-      <SEO postPath={`${config.siteUrl}` + `${category}`} title={`${category}`} postSEO />
+      <Helmet title={`${category}`} postPath={`${config.siteUrl}` + `${category}`} />
       <CategoryWrapper>
         <Wrapper>
           <CategoryTitle>

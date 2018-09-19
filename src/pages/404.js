@@ -46,8 +46,7 @@ const BG = styled.div`
 
 const FourOhFour = () => (
   <Layout mode="night">
-    <Helmet title="Page Not Found" />
-    <SEO postPath="https://www.jeffreyherrera.com/404" title="Page Not Found" description="404! Looks like someone's lost." postSEO />
+    <Helmet title="Page Not Found" postPath="https://www.jeffreyherrera.com/404" description="404! Looks like someone's lost." />
     <Wrapper>
       <BG />
       <FourOhFourWrapper>

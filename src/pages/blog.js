@@ -12,8 +12,7 @@ const Blog = ({
   },
 }) => (
   <Layout>
-    <Helmet title="Blog" />
-    <SEO postPath="https://www.jeffreyherrera.com/blog" title="Blog" postSEO />
+    <Helmet title="Blog" postPath="https://www.jeffreyherrera.com/blog" />
     <Wrapper>
       <BlogList>
         {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, featured, post } }) => (
