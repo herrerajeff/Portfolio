@@ -145,6 +145,16 @@ const AreaItem = styled.span`
   }
 `;
 
+const schemaOrgJSONLD = [
+  {
+    '@context': 'http://schema.org',
+    '@type': 'WebSite',
+    url: config.siteUrl,
+    name: config.siteTitle,
+    alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+  },
+];
+
 const Layout = ({
   isProject = false,
   children,
