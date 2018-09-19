@@ -173,7 +173,7 @@ const Layout = ({
   image
 }) => (
   <div>
-    <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera" />>
+    <Helmet titleTemplate="%s · Jeffrey Herrera" defaultTitle="Jeffrey Herrera" />
   <ThemeProvider theme={{ mode }}>
     {!isProject ? (
       <Site>
