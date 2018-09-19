@@ -181,6 +181,7 @@ const Layout = ({
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
+      {postPath ? (<Link rel="canonical" content={postPath}/>):(<Link rel="canonical" content={config.siteUrl}/>)};
       {postPath ? (<meta property="og:url" content={postPath}/>):(<meta property="og:url" content={config.siteUrl}/>)};
       <meta property="og:type" content="website" />
       {title ? (<meta property="og:title" content={title} />):(<meta property="og:title" content={config.siteTitle} />)};
