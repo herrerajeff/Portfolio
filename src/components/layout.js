@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { primary, bg, text, header } from '../utils/theme';
 import { media } from '../utils/media';
@@ -6,7 +7,6 @@ import { Wrapper } from './elements';
 import Pagination from './pagination';
 import Header from './header';
 import Footer from './footer';
-import SEO from './seo';
 
 const GlobalStyle = createGlobalStyle`
   html{
