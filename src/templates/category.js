@@ -56,7 +56,7 @@ const Category = props => {
   return (
     <Layout>
       <Helmet title={`${category}`} />
-      <SEO postPath={`${config.siteUrl}` + `${category}`} postNode={projectData} title={`${category}`} postSEO />
+      <SEO postPath={`${config.siteUrl}` + `${category}`} title={`${category}`} postSEO />
       <CategoryWrapper>
         <Wrapper>
           <CategoryTitle>
