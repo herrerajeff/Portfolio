@@ -24,7 +24,7 @@ const SEO = props => {
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
       <meta property="og:url" content={config.siteUrl} />
-      {postSEO ? <meta property="og:type" content="article" /> : null}
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={config.siteTitle} />
       <meta property="og:description" content={config.siteDescription} />
       <meta property="og:image" content={config.siteUrl + config.siteBanner} />
