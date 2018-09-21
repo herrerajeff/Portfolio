@@ -117,7 +117,7 @@ const Post = props => {
   const postData = props.data.contentfulBlogPost;
   return (
     <Layout>
-      <Helmet title={`${postData.title}`} postPath={postData.slug} postNode={postData} description={postData.description.description} image={postData.featured.sizes.src} />
+      <Helmet title={`${postData.title}`} />
       <Wrapper>
         <PostWrapper>
           <PostTitle>{postData.title}</PostTitle>
