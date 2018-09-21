@@ -15,7 +15,7 @@ const Blog = ({
     <Helmet title="Blog" postPath="https://www.jeffreyherrera.com/blog" />
     <Wrapper>
       <BlogList>
-        {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, featured, post } }) => (
+        {edges.map(({ node: { title, date, excerpt, slug, timeToRead, category, featured, post, fluid } }) => (
           <Card
             title={title}
             date={date}
@@ -25,8 +25,8 @@ const Blog = ({
             category={category}
             key={slug}
             alt={title}
-            sizes={featured.sizes}
-            aspectRatio={featured.sizes.aspectRatio}
+            sizes={featured.fluid}
+            aspectRatio={featured.fluid.aspectRatio}
           >
             <div dangerouslySetInnerHTML={{ __html: post.childMarkdownRemark.html }} />
           </Card>
@@ -56,7 +56,7 @@ export const BlogQuery = graphql`
           }
           featured {
             id
-            sizes(maxWidth: 800, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               base64
               src
               srcSet
@@ -64,7 +64,6 @@ export const BlogQuery = graphql`
               srcSetWebp
               aspectRatio
               sizes
-              ...GatsbyContentfulSizes_withWebp
             }
           }
         }
