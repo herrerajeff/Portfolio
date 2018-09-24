@@ -25,6 +25,7 @@ const StartupList = styled.ul`
   padding: 0;
   margin: 0;
   li {
+    margin: 0;
   }
   a {
     display: flex;
@@ -33,14 +34,19 @@ const StartupList = styled.ul`
     background-color: white;
     font-size: 12px;
     letter-spacing: 0.05em;
-    font-weight: 500;
-    padding: 0.5em 0.75em;
+    font-weight: 600;
+    padding: 1em 1.25em;
     color: ${text};
+    position: relative;
+    transition: all .25s ease;
     &:hover {
       box-shadow: 0 3px 20px -3px hsla(250, 60%, 30%, 25%);
       position: relative;
       text-decoration: none !important;
       font-style: normal !important;
+      z-index: 1;
+      background-color: #222;
+      color: white;
     }
   }
   img {
@@ -98,7 +104,7 @@ const MainLinks = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
-  margin-top: 3em;
+  margin-top: 1em;
   @media ${media.s} {
     grid-template-columns: 1fr 1fr;
   }
