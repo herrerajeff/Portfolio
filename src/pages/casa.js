@@ -191,10 +191,8 @@ const Startup = () => (
           <StartupLink to="https://www.twitch.tv/directory/following">Twitch</StartupLink>
           <StartupLink to="https://mobile.twitter.com/">Twitter</StartupLink>
           <StartupLink to="https://smile.amazon.com/">Amazon</StartupLink>
-          <StartupLink to="https://thewatchseries.us/new-release">TV &amp; Movies</StartupLink>
           <StartupLink to="http://www.seamless.com/">Seamless</StartupLink>
           <StartupLink to="http://www.netflix.com/">Netflix</StartupLink>
-          <StartupLink to="http://raindrop.io/">Raindrop</StartupLink>
         </StartupList>
         <StartupList>
           <h4>Dev</h4>
