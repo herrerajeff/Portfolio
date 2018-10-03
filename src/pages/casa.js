@@ -33,10 +33,9 @@ const StartupList = styled.ul`
     justify-content: space-between;
     background-color: white;
     font-size: 12px;
-    letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: 400;
     padding: 1em 1.25em;
-    color: ${text};
+    color: #222;
     position: relative;
     transition: all .25s ease;
     &:hover {
