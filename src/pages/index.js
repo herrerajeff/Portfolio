@@ -168,7 +168,7 @@ const Home = ({
         {edges.map(({ node: { title, cover, description, slug, id, mode, color } }) => (
           <li key={id}>
             <WorkLink to={slug}>
-              {/* <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} /> */}
+              <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} />
               <ThemeProvider theme={{ mode: `${mode}` }}>
                 <Descriptor background={color}>
                   <h2>{title}</h2>
