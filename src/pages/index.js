@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import styled, { ThemeProvider } from 'styled-components';
 import { Layout } from '../components/layout';
 import { Wrapper } from '../components/elements';
-import { text, header } from '../utils/theme';
+import { text, header, primary } from '../utils/theme';
 import { media } from '../utils/media';
 
 const WorkList = styled.ul`
@@ -100,7 +100,6 @@ const Descriptor = styled.div.attrs({
 `;
 
 const Hero = styled.div`
-  margin: 0 1em;
   height: 200px;
   text-align: center;
   position: relative;
@@ -120,13 +119,13 @@ const Hero = styled.div`
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: white;
-    font-size: 2.1em;
+    font-size: 2em;
     letter-spacing: 1px;
     line-height: 1em;
     z-index: 1;
     @media ${media.m} {
-      padding: 0 2em;
-      font-size: 4em;
+      padding: 0 2.5em;
+      font-size: 4.2em;
     }
   }
   div{
@@ -141,11 +140,15 @@ const Hero = styled.div`
   }
 `;
 
-const Selected = styled.div`
+const Selected = styled.a`
   text-align: center;
   padding: 2em 0;
   color: black;
-  pointer-events: none;
+  &:hover {
+    color: ${text};
+    text-decoration: none !important;
+    font-style: normal !important;
+  }
 `;
 
 const Home = ({
@@ -155,17 +158,17 @@ const Home = ({
 }) => (
   <Layout>
     <Helmet title="Designer" />
-    <Hero>
-      <h1>I'm Jeff, a visual designer working on print + digital in New York City.</h1>
-      <div></div>
-    </Hero>
     <Wrapper>
-      <Selected>Selected Work ↓</Selected>
-      <WorkList>
+      <Hero>
+        <h1>I'm Jeff, a visual designer working on print + digital in New York City.</h1>
+        <div></div>
+      </Hero>
+      <Selected href="#Work">Selected Work ↓</Selected>
+      <WorkList id="Work">
         {edges.map(({ node: { title, cover, description, slug, id, mode, color } }) => (
           <li key={id}>
             <WorkLink to={slug}>
-              <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} />
+              {/* <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} /> */}
               <ThemeProvider theme={{ mode: `${mode}` }}>
                 <Descriptor background={color}>
                   <h2>{title}</h2>
