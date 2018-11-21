@@ -99,6 +99,55 @@ const Descriptor = styled.div.attrs({
   }
 `;
 
+const Hero = styled.div`
+  margin: 0 1em;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16);
+  @media ${media.m} {
+    height: 500px;
+  }
+  h1{
+    padding: 0 1em;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 2.1em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    z-index: 1;
+    @media ${media.m} {
+      padding: 0 2em;
+      font-size: 4em;
+    }
+  }
+  div{
+    background-image: url('https://media.giphy.com/media/4T6oo000YsyHK/giphy.gif');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -2;
+    filter: grayscale(100%) contrast(100%);
+  }
+`;
+
+const Selected = styled.div`
+  text-align: center;
+  padding: 2em 0;
+  color: black;
+  pointer-events: none;
+`;
+
 const Home = ({
   data: {
     allContentfulProject: { edges },
@@ -106,7 +155,12 @@ const Home = ({
 }) => (
   <Layout>
     <Helmet title="Designer" />
+    <Hero>
+      <h1>I'm Jeff, a visual designer working on print + digital in New York City.</h1>
+      <div></div>
+    </Hero>
     <Wrapper>
+      <Selected>Selected Work ↓</Selected>
       <WorkList>
         {edges.map(({ node: { title, cover, description, slug, id, mode, color } }) => (
           <li key={id}>
