@@ -127,6 +127,10 @@ const Hero = styled.div`
       padding: 0 2.5em;
       font-size: 4.2em;
     }
+    @media ${media.l} {
+      padding: 0 2.5em;
+      font-size: 2.7em;
+    }
   }
   div{
     background-image: url('https://media.giphy.com/media/4T6oo000YsyHK/giphy.gif');
