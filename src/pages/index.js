@@ -100,15 +100,15 @@ const Descriptor = styled.div.attrs({
 `;
 
 const Hero = styled.div`
-  height: 200px;
+  height: 250px;
   text-align: center;
   position: relative;
   background-color: #000;
-  border-radius: 12px;
   overflow: hidden;
   z-index: 0;
   box-shadow: 0 6px 12px rgba(0,0,0,0.16);
   @media ${media.m} {
+    border-radius: 12px;
     height: 500px;
   }
   h1{
@@ -119,7 +119,7 @@ const Hero = styled.div`
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
     letter-spacing: 1px;
     line-height: 1em;
     z-index: 1;
@@ -142,12 +142,33 @@ const Hero = styled.div`
 
 const Selected = styled.a`
   text-align: center;
-  padding: 2em 0;
+  padding: 1em 0;
   color: black;
+  @media ${media.m}{
+    padding: 2em 0;
+  }
   &:hover {
     color: ${text};
     text-decoration: none !important;
     font-style: normal !important;
+  }
+`;
+
+const HeroWrapper = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  @media ${media.s} {
+    max-width: 1350px;
+  }
+  @media ${media.m} {
+    max-width: 1390px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media ${media.l} {
+    max-width: 1430px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 `;
 
@@ -158,11 +179,13 @@ const Home = ({
 }) => (
   <Layout>
     <Helmet title="Designer" />
-    <Wrapper>
+    <HeroWrapper>
       <Hero>
         <h1>I'm Jeff, a visual designer working on print + digital in New York City.</h1>
         <div></div>
       </Hero>
+    </HeroWrapper>
+    <Wrapper>
       <Selected href="#Work">Selected Work ↓</Selected>
       <WorkList id="Work">
         {edges.map(({ node: { title, cover, description, slug, id, mode, color } }) => (
