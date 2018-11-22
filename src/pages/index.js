@@ -125,11 +125,11 @@ const Hero = styled.div`
     z-index: 1;
     @media ${media.m} {
       padding: 0 2.5em;
-      font-size: 4.2em;
+      font-size: 2.7em;
     }
     @media ${media.l} {
       padding: 0 2.5em;
-      font-size: 2.7em;
+      font-size: 4.2em;
     }
   }
   div{
@@ -195,7 +195,7 @@ const Home = ({
         {edges.map(({ node: { title, cover, description, slug, id, mode, color } }) => (
           <li key={id}>
             <WorkLink to={slug}>
-              <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} />
+              {/* <Img key={cover.sizes.src} alt={title} sizes={cover.sizes} aspectRatio={cover.sizes.aspectRatio} /> */}
               <ThemeProvider theme={{ mode: `${mode}` }}>
                 <Descriptor background={color}>
                   <h2>{title}</h2>
