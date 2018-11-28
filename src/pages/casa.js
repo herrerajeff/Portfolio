@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 
 const StartupWrapper = styled.div`
   display: grid;
-  margin: 3em 0;
+  margin: 3em 0 0 0;
   grid-template-columns: 1fr;
   grid-gap: 1em;
   @media ${media.s} {
