@@ -6,7 +6,7 @@ const primary = theme('mode', {
 });
 
 const bg = theme('mode', {
-  day: '#f7f7f7',
+  day: '#F2F5F7',
   night: '#171717',
 });
 
