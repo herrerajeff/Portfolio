@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import { media } from '../utils/media';
 import { primary, text, header } from '../utils/theme';
 
 const NavListContainer = styled.div`
@@ -34,7 +35,6 @@ const NavListContainer = styled.div`
           display: block;
           color: rgba(255,255,255,0.8);
           text-align: right;
-          font-size: 1.2em;
           margin-bottom: 3em;
           svg {
             path {
@@ -69,7 +69,6 @@ const NavList = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   color: ${text};
-  font-weight: 600;
   li {
     display: inline;
     margin-bottom: 0;
@@ -79,15 +78,12 @@ const NavList = styled.ul`
   }
   a {
     font-family: 'IBM Plex Sans Condensed';
-    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     color: ${header};
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.25s ease-in-out;
-    font-weight: 700;
-    font-size: 1.1375em;
     &:hover {
       border-bottom: 1px solid ${header};
     }
@@ -107,11 +103,19 @@ const Separator = styled.span`
 `;
 
 const NavSub = styled.li`
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.05em;
   position: relative;
-  top: -3px;
+  // top: -3px;
   text-align: right;
+  opacity: 0.55;
+  transition: all .3s ease;
+  @media ${media.s}{
+    font-size: 0.7em;
+  }
+  &:hover{
+    opacity: 1;
+  }
   p {
     margin-bottom: 0;
     display: inline;
@@ -119,6 +123,8 @@ const NavSub = styled.li`
     color: ${text};
   }
   a {
+    display: inline-block;
+    line-height: 1.1em;
     svg {
       margin: 0 0.5em;
     }
@@ -130,7 +136,7 @@ const NavSub = styled.li`
   svg {
     width: 1.625em !important;
     position: relative;
-    top: 5px;
+    top: 4px;
     path {
       transition: all 0.25s ease;
       fill: ${header};
@@ -177,9 +183,17 @@ const CloseBtn = styled.svg`
   }
 `;
 
+const MainLink = styled(Link)`
+font-size: 44px;
+font-weight: 500;
+  @media ${media.s} {
+    font-size: 16px;
+  }
+`;
+
 const NavLink = props => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <MainLink to={props.to}>{props.children}</MainLink>
   </li>
 );
 
