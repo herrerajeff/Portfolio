@@ -157,14 +157,6 @@ const Startup = () => (
         <a
           target="_blank"
           rel="nofollow noopener noreferrer"
-          href="https://www.notion.so/jeffreyherrera/04f3a94128844894ad4f7216279d4db7?v=4ea227d9e1eb4e0fb9ed967fd5e12006"
-        >
-          <span>Job Search</span>
-          <span>↗</span>
-        </a>
-        <a
-          target="_blank"
-          rel="nofollow noopener noreferrer"
           href="https://www.notion.so/jeffreyherrera/Reading-List-8afc7c723d124f68ba5c82246b558921"
         >
           <span>Reading List</span>
