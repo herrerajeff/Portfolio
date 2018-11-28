@@ -87,6 +87,7 @@ const NavList = styled.ul`
     border-bottom: 1px solid transparent;
     transition: all 0.25s ease-in-out;
     font-weight: 700;
+    font-size: 1.1375em;
     &:hover {
       border-bottom: 1px solid ${header};
     }
@@ -106,7 +107,8 @@ const Separator = styled.span`
 `;
 
 const NavSub = styled.li`
-  font-size: 0.7em;
+  font-size: 9px;
+  letter-spacing: 0.05em;
   position: relative;
   top: -3px;
   text-align: right;
@@ -128,7 +130,7 @@ const NavSub = styled.li`
   svg {
     width: 1.625em !important;
     position: relative;
-    top: 3px;
+    top: 5px;
     path {
       transition: all 0.25s ease;
       fill: ${header};
